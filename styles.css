@@ -11,6 +11,17 @@ body {
     margin-bottom: 5px;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li img {
+    width: 16px; /* adjust to desired width */
+    height: 20px; /* adjust to desired height */
+    margin-right: 18px; /* add spacing between the image and list item text */
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
 
 
 /*
