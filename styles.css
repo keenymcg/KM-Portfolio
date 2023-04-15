@@ -1,20 +1,63 @@
+@media only screen and (max-width: 768px) { 
+    .container {
+      min-width: calc(100% - 20px); /* 10px on each side */
+    }
+    .menu img {
+        display: none;
+    }
+    h1 {
+        margin: ;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    .menu img {
+        opacity: 0;
+    }
+}
+
 body {
     position: relative;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: rgb(253, 238, 218);
+    background: #F9FEFF ;
 }
 
 header {
     display: flex;
-    margin: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 6rem;
+    min-width: calc(100% - 60px);
 }
 
 .tempAvatar {
     height: 230px;
     width: 230px;
     border-radius: 30px;
+}
+
+h1 {
+    position: relative;
+    color: #2a3233;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: 10px;
+    right: -5px;
+    bottom: 5px;
+    background: #B7D1D1;
+    filter: blur(5px);
+}
+
+li {
+    margin: 15px 0;
 }
 
 #bird {
@@ -35,6 +78,7 @@ header {
 
 .menu img {
     margin: 5px;
+    transition: opacity 0.5s ease-out;
 }
 
 #camera {
@@ -59,52 +103,3 @@ li img {
     vertical-align: middle;
     margin-bottom: 5px;
 }
-
-
-/*
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 1000;
-    display: none; 
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 20px;
-}
-
-nav a {
-    display: block;
-    padding: 10px 20px;
-    color: #333;
-    text-decoration: none;
-}
-
-section {
-    height: 1000px; /* Replace with your actual section height 
-    margin-top: 100px;
-}
-
-#about {
-    background-color: #f2f2f2;
-}
-
-#portfolio {
-    background-color: #ddd;
-}
-
-#contact {
-    background-color: #eee;
-}
-*/
