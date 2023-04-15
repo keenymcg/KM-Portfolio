@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#bird {
+    height: 44.5px;
+    width: 60px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
