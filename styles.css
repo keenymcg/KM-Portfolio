@@ -10,3 +10,53 @@ body {
     vertical-align: middle;
     margin-bottom: 5px;
 }
+
+
+
+/*
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    display: none; 
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+section {
+    height: 1000px; /* Replace with your actual section height 
+    margin-top: 100px;
+}
+
+#about {
+    background-color: #f2f2f2;
+}
+
+#portfolio {
+    background-color: #ddd;
+}
+
+#contact {
+    background-color: #eee;
+}
+*/
