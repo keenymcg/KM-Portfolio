@@ -6,6 +6,17 @@ body {
     background: rgb(253, 238, 218);
 }
 
+header {
+    display: flex;
+    margin: 100px;
+}
+
+.tempAvatar {
+    height: 230px;
+    width: 230px;
+    border-radius: 30px;
+}
+
 #bird {
     height: 44.5px;
     width: 60px;
@@ -14,8 +25,12 @@ body {
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     right: 0;
+    margin-right: 20px;
 }
 
 .menu img {
@@ -30,6 +45,7 @@ body {
 #resume {
     height: 60px;
     width: 50px;
+    margin-right: 11.5px;
 }
 
 ul {
