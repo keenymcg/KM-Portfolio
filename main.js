@@ -34,4 +34,43 @@ passions.forEach(passion => {
 });
 
 
+// PROJECTS
+
+// Get all the project images
+const projImgs = document.querySelectorAll('.projImg');
+
+// Loop through each image and add the event listeners
+projImgs.forEach(img => {
+  // Change the cursor to a pointer when hovering over the image
+    img.style.cursor = 'pointer';
+
+    // When hovering over the image, increase its width and height by 15px over 1 second
+    img.addEventListener('mouseover', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth + 15}px`;
+        img.style.height = `${img.offsetHeight + 15}px`;
+    });
+
+    // When no longer hovering over the image, decrease its width and height by 15px over 1 second
+    img.addEventListener('mouseout', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth - 15}px`;
+        img.style.height = `${img.offsetHeight - 15}px`;
+    });
+
+    // When clicking on the image, open the corresponding link
+    if (img.id === 'etch') {
+        img.addEventListener('click', () => {
+        window.location.href = 'https://example.com/etch';
+        });
+    } else if (img.id === 'calc') {
+        img.addEventListener('click', () => {
+        window.location.href = 'https://example.com/calc';
+        });
+    } else if (img.id === 'game') {
+        img.addEventListener('click', () => {
+        window.location.href = 'https://example.com/game';
+        });
+    }
+});
 
