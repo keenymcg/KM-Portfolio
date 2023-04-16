@@ -27,11 +27,13 @@ body {
 
 header {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     min-width: calc(100% - 60px);
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .tempAvatar {
@@ -54,7 +56,7 @@ h1::before {
     z-index: -1;
     top: 20px;
     left: 10px;
-    right: 250px;
+    right: 40px;
     bottom: 5px;
     background: #f5d184 ;
     filter: blur(5px);
@@ -154,15 +156,17 @@ li img {
     animation: sequential-animation 1s ease-out forwards 4s;
 }
 
-.eggs-list li:nth-child(6) {
-    animation: sequential-animation 1s ease-out forwards 5s;
+h6 {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3F497F;
+    font-size: 12px;
 }
-
 
 #arrow {
     display: flex;
     margin: 20px auto;
-    margin-top: 100px;
+    margin-top: 0px;
     height: 50px;
     width: 50px;
     position: relative;
