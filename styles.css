@@ -162,3 +162,43 @@ li img {
 .eggs-list li:nth-child(6) {
     animation: sequential-animation 1s ease-out forwards 5s;
 }
+
+
+#arrow {
+    display: flex;
+    margin: 40px auto;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    animation-name: arrow-move;
+    animation-duration: 2s;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes arrow-move {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-5px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+.projImg {
+    height: 150px;
+    width: 150px;
+}
+
