@@ -73,4 +73,3 @@ projImgs.forEach(img => {
         });
     }
 });
-
