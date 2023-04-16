@@ -27,10 +27,10 @@ body {
 
 header {
     display: flex;
+    height: 100vh;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 250px;
     min-width: calc(100% - 60px);
 }
 
@@ -38,11 +38,6 @@ header {
     height: 230px;
     width: 230px;
     border-radius: 30px;
-    transition: opacity 0.15s ease-out;
-}
-
-.tempAvatar.fade-out {
-    opacity: 0;
 }
 
 h1 {
@@ -166,7 +161,8 @@ li img {
 
 #arrow {
     display: flex;
-    margin: 40px auto;
+    margin: 20px auto;
+    margin-top: 100px;
     height: 50px;
     width: 50px;
     position: relative;
