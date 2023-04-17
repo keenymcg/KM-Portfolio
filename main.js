@@ -17,11 +17,11 @@ menu.forEach(img => {
 
     if (img.id === 'resume') {
         img.addEventListener('click', () => {
-        window.location.href = "https://www.linkedin.com/in/keenanmcguckin/";
+        window.location.href = "resume.html";
         });
     } else if (img.id === 'camera') {
         img.addEventListener('click', () => {
-        window.location.href = "https://github.com/keenymcg";
+        window.location.href = "https://www.instagram.com/keenoman_photography/";
         });
     };
 });
@@ -44,7 +44,7 @@ function handlePassionHover(event) {
     if (passionImageSrc === "images/education.png") {
         h6.textContent = `RPCV Ethiopia, 2017-2019`;
     } else if (passionImageSrc === "images/music.jpg") {
-        h6.textContent = "I also play guitar sometimes"; 
+        h6.textContent = "And guitar.  Anyway, here's Wonderwall..."; 
     } else if (passionImageSrc === "images/paraglide.jpeg") {
         h6.textContent = "Certified Pilot (P2)"; 
     } else if (passionImageSrc === "images/hummingbird.jpg") {
@@ -92,15 +92,15 @@ projImgs.forEach(img => {
     // When clicking on the image, open the corresponding link
     if (img.id === 'etch') {
         img.addEventListener('click', () => {
-        window.location.href = 'https://example.com/etch';
+        window.location.href = "https://keenymcg.github.io/Odin_Etch_a_sketch/";
         });
     } else if (img.id === 'calc') {
         img.addEventListener('click', () => {
-        window.location.href = 'https://example.com/calc';
+        window.location.href = "https://keenymcg.github.io/Odin_Calculator/";
         });
     } else if (img.id === 'game') {
         img.addEventListener('click', () => {
-        window.location.href = 'https://example.com/game';
+        window.location.href = "https://keenymcg.github.io/Odin-Rock-Paper-Scissor-JS/";
         });
     }
 });

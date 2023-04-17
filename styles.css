@@ -7,6 +7,52 @@
     .menu img {
         display: none;
     }
+
+    header {
+        margin-top: 20px;
+        margin-bottom: 300px;
+        font-size: 10px;
+    }
+
+    .woop::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 20px;
+        left: 10px;
+        right: 40px;
+        bottom: 5px;
+        background: #eaddbd ;
+        filter: blur(20px);
+    }
+
+    li {
+        margin: 15px 0;
+        letter-spacing: 1px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 12px;
+        color: #3F497F;
+    }
+
+    h1 {
+        font-size: 10px;
+    }
+
+    .specialH1 {
+        width: 80vw;
+        right: 60px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .aboutHeading {
+        text-align: center;
+        margin-left: 60px;
+    }
+
+    .aboutMeP {
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 1095px) {
@@ -318,6 +364,14 @@ a:active {
     color: #E21818;
 }
 
+.contactHeading {
+    width: 300px;
+}
+
+.contactHeading::before {
+    display: none;
+}
+
 #contactMe {
     display: flex;
     flex-wrap: wrap;
@@ -326,4 +380,42 @@ a:active {
     align-items: center;
     margin-left: 40px;
     margin-right: 40px;
+}
+
+.resumeContainer {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+}
+
+#resume2 {
+    border-radius: 30px;
+    height: 1271px;
+    width: 900px;
+}
+
+#homeBtn {
+    height: 40px;
+    width: 47px;
+    position: sticky;
+    margin: auto;
+    padding: 40px;
+    animation-name: home-move;
+    animation-duration: 5s;
+    animation-delay: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes home-move {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-5px);
+    }
+    100% {
+    transform: translateY(0);
+    }
 }
