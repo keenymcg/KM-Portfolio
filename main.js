@@ -1,3 +1,34 @@
+// MENU
+const menu = document.querySelectorAll(".menuImg")
+menu.forEach(img => {
+    img.style.cursor = 'pointer';
+
+    img.addEventListener('mouseover', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth + 10}px`;
+        img.style.height = `${img.offsetHeight + 10}px`;
+    });
+
+    img.addEventListener('mouseout', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth - 10}px`;
+        img.style.height = `${img.offsetHeight - 10}px`;
+    });
+
+    if (img.id === 'resume') {
+        img.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/keenanmcguckin/";
+        });
+    } else if (img.id === 'camera') {
+        img.addEventListener('click', () => {
+        window.location.href = "https://github.com/keenymcg";
+        });
+    };
+});
+
+
+
+
 // Get references to the avatar and passion list elements
 const avatar = document.querySelector('.tempAvatar');
 const passions = document.querySelectorAll('.passions');
@@ -13,11 +44,11 @@ function handlePassionHover(event) {
     if (passionImageSrc === "images/education.png") {
         h6.textContent = `RPCV Ethiopia, 2017-2019`;
     } else if (passionImageSrc === "images/music.jpg") {
-        h6.textContent = "Trained Singer, Pianist, & Performer"; 
+        h6.textContent = "I also play guitar sometimes"; 
     } else if (passionImageSrc === "images/paraglide.jpeg") {
-        h6.textContent = "Certified Pilot"; 
+        h6.textContent = "Certified Pilot (P2)"; 
     } else if (passionImageSrc === "images/hummingbird.jpg") {
-        h6.textContent = "Birds <3"; 
+        h6.textContent = "Birds <3 (Pic by me)"; 
     } else if (passionImageSrc === "images/photography.jpg") {
         h6.textContent = "Sony a7rii + Tamron 28-200"; 
     }
@@ -70,6 +101,40 @@ projImgs.forEach(img => {
     } else if (img.id === 'game') {
         img.addEventListener('click', () => {
         window.location.href = 'https://example.com/game';
+        });
+    }
+});
+
+
+// SOCIALS
+
+const socials = document.querySelectorAll(".socialsImg")
+socials.forEach(img => {
+    img.style.cursor = 'pointer';
+
+    img.addEventListener('mouseover', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth + 10}px`;
+        img.style.height = `${img.offsetHeight + 10}px`;
+    });
+
+    img.addEventListener('mouseout', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth - 10}px`;
+        img.style.height = `${img.offsetHeight - 10}px`;
+    });
+
+    if (img.id === 'linkedIn') {
+        img.addEventListener('click', () => {
+        window.location.href = "https://www.linkedin.com/in/keenanmcguckin/";
+        });
+    } else if (img.id === 'gitHub') {
+        img.addEventListener('click', () => {
+        window.location.href = "https://github.com/keenymcg";
+        });
+    } else if (img.id === 'insta') {
+        img.addEventListener('click', () => {
+        window.location.href = "https://www.instagram.com/keenoman_photography/";
         });
     }
 });

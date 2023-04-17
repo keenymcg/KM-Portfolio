@@ -2,12 +2,10 @@
 
 @media only screen and (max-width: 768px) { 
     .container {
-      min-width: calc(100% - 20px); /* 10px on each side */
+        min-width: calc(100% - 20px); /* 10px on each side */
     }
     .menu img {
         display: none;
-    }
-    h1 {
     }
 }
 
@@ -91,8 +89,7 @@ li {
     align-items: center;
     position: fixed;
     right: 0;
-    margin-right: 30px;
-    margin-top: -220px;
+    padding: 20px
 }
 
 .menu img {
@@ -204,6 +201,7 @@ h6 {
 
 .projectSect {
     margin: 60px auto;
+    max-width: 900px;
 }
 
 .specialH1 {
@@ -212,12 +210,27 @@ h6 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     padding: 0 100px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.specialH1Wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-bottom: 60px;
 }
 
 .specialH1::before {
     content: "";
-    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 20px;
+    left: 130px;
+    right: 130px;
+    bottom: 5px;
+    background: #f1ddc2 ;
+    filter: blur(30px);
 }
 
 #aboutMe {
@@ -225,13 +238,16 @@ h6 {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    min-width: calc(100% - 60px);
     margin-left: 40px;
     margin-right: 40px;
 }
 
 .aboutHeading {
-    margin: auto 80px;
+    width: 300px;
+}
+
+.aboutWrapper {
+    max-width: 900px;
 }
 
 .aboutHeading::before {
@@ -239,8 +255,8 @@ h6 {
     position: absolute;
     z-index: -1;
     top: 20px;
-    left: 2vw;
-    right: 49vw;
+    left: 20px;
+    right: 25px;
     bottom: 5px;
     background: #f5d184 ;
     filter: blur(5px);
@@ -249,23 +265,7 @@ h6 {
 .aboutParaWrap {
     display: flex;
     flex-direction: column;
-    margin: auto 130px;
-}
-
-.contactMe {
-    margin: auto 80px;
-}
-
-.contactMe::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 20px;
-    left: 2vw;
-    right: 49vw;
-    bottom: 5px;
-    background: #f5d184 ;
-    filter: blur(5px);
+    margin: auto 70px;
 }
 
 #arrow2 {
@@ -291,8 +291,6 @@ h6 {
 .socialsWrapper {
     display: flex;
     flex-direction: column;
-    margin: auto 130px;
-    margin-left: 170px;
 }
 
 footer {
@@ -310,4 +308,22 @@ footer {
     width: 25px;
     vertical-align: middle;
     margin-bottom: 5px;
+}
+
+a {
+    color: #00235B;
+}
+
+a:active {
+    color: #E21818;
+}
+
+#contactMe {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
 }
