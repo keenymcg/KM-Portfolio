@@ -7,11 +7,14 @@
     .menu img {
         display: none;
     }
-
+    
     header {
-        margin-top: 20px;
-        margin-bottom: 300px;
+        margin-top: 60px;
+        margin-bottom: 150px;
         font-size: 10px;
+    }
+    .tempAvatar {
+        margin-top: 30px;
     }
 
     .woop::before {
@@ -22,7 +25,7 @@
         left: 10px;
         right: 40px;
         bottom: 5px;
-        background: #eaddbd ;
+        background: #bddbea ;
         filter: blur(20px);
     }
 
@@ -30,7 +33,7 @@
         margin: 15px 0;
         letter-spacing: 1px;
         font-family: 'Ubuntu', sans-serif;
-        font-size: 12px;
+        font-size: 15px;
         color: #3F497F;
     }
 
