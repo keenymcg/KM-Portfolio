@@ -27,12 +27,13 @@ menu.forEach(img => {
 });
 
 
-
+// PASSIONS
 
 // Get references to the avatar and passion list elements
 const avatar = document.querySelector('.tempAvatar');
 const passions = document.querySelectorAll('.passions');
-const h6 = document.querySelector('.avatarText');
+const h6row1 = document.querySelector('.avatarText');
+const h6row2 = document.querySelector('.avatarTextRow2')
 
 // Define a function to handle the mouseover event for each passion list item
 function handlePassionHover(event) {
@@ -42,24 +43,33 @@ function handlePassionHover(event) {
     // Change the avatar image to the new source
     avatar.setAttribute('src', passionImageSrc);
     if (passionImageSrc === "images/education.png") {
-        h6.textContent = `RPCV Ethiopia, 2017-2019`;
+        h6row1.textContent = `RPCV Ethiopia, 2017-2019`;
+        h6row1.style.color = '#3F497F'
+        h6row2.textContent = 'text'
+        h6row2.style.color = '#F0F0F0'
     } else if (passionImageSrc === "images/music.jpg") {
-        h6.textContent = "And guitar.  Anyway, here's Wonderwall..."; 
+        h6row1.textContent = "And guitar."; 
+        h6row1.style.color = '#3F497F'
+        h6row2.textContent = "Anyway, here's Wonderwall..."
+        h6row2.style.color = '#3F497F'
     } else if (passionImageSrc === "images/paraglide.jpeg") {
-        h6.textContent = "Certified Pilot (P2)"; 
+        h6row1.textContent = "Certified Pilot (P2)"; 
+        h6row1.style.color = '#3F497F'
+        h6row2.textContent = 'text'
+        h6row2.style.color = '#F0F0F0'
     } else if (passionImageSrc === "images/hummingbird.jpg") {
-        h6.textContent = "Birds <3 (Pic by me)"; 
+        h6row1.textContent = "Birds <3";
+        h6row2.style.color = '#3F497F'
+        h6row2.textContent = "(pic by me)"
     } else if (passionImageSrc === "images/photography.jpg") {
-        h6.textContent = "Sony a7rii + Tamron 28-200"; 
-    }
+        h6row1.textContent = "Sony a7rii + Tamron 28-200"; 
+        h6row2.style.color = '#3F497F'
+        h6row2.textContent = "(pic also by me)"
+    }   
+
+
 };
 
-/*<li class="passions" data-avatar="images/music.jpg"><img src="images/egg-2.png" alt="egg image" />Writing Music & Stories</li>
-<li class="passions" data-avatar="images/paraglide.jpeg"><img src="images/egg-1.png" alt="egg image" />Paragliding</li>
-<li class="passions" data-avatar="images/hummingbird.jpg"><img src="images/egg-2.png" alt="egg image" />Birds</li>
-<li class="passions" data-avatar="images/photography.jpg"*/
-
-// Loop through each passion list item and add a mouseover event listener
 passions.forEach(passion => {
     passion.addEventListener('mouseover', handlePassionHover);
 });
