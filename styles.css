@@ -78,6 +78,20 @@ body {
     position: absolute;
     margin-left: 400px;
     margin-top: 180px;
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 header {
@@ -126,11 +140,57 @@ p {
     line-height: 1.5rem;
 }
 
-li {
+/* li:hover {
+    transform: scale(1.05);
+} */
+
+ul {
+    list-style-type: none;
+}
+
+li img {
+    width: 16px;
+    height: 20px;
+    margin-right: 18px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+.eggs-list li {
+    opacity: 0;
     margin: 15px 0;
     letter-spacing: 1px;
     font-family: 'Ubuntu', sans-serif;
     color: #3F497F;
+}
+
+@keyframes sequential-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.eggs-list li:nth-child(1) {
+    animation: sequential-animation 1s ease-out forwards;
+}
+
+.eggs-list li:nth-child(2) {
+    animation: sequential-animation 1s ease-out forwards 1s;
+}
+
+.eggs-list li:nth-child(3) {
+    animation: sequential-animation 1s ease-out forwards 2s;
+}
+
+.eggs-list li:nth-child(4) {
+    animation: sequential-animation 1s ease-out forwards 3s;
+}
+
+.eggs-list li:nth-child(5) {
+    animation: sequential-animation 1s ease-out forwards 4s;
 }
 
 #bird {
@@ -163,51 +223,6 @@ li {
     height: 50px;
     width: 55px;
     margin-right: 11.5px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li img {
-    width: 16px;
-    height: 20px;
-    margin-right: 18px;
-    vertical-align: middle;
-    margin-bottom: 5px;
-}
-
-.eggs-list li {
-    opacity: 0;
-}
-
-@keyframes sequential-animation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.eggs-list li:nth-child(1) {
-    animation: sequential-animation 1s ease-out forwards;
-}
-
-.eggs-list li:nth-child(2) {
-    animation: sequential-animation 1s ease-out forwards 1s;
-}
-
-.eggs-list li:nth-child(3) {
-    animation: sequential-animation 1s ease-out forwards 2s;
-}
-
-.eggs-list li:nth-child(4) {
-    animation: sequential-animation 1s ease-out forwards 3s;
-}
-
-.eggs-list li:nth-child(5) {
-    animation: sequential-animation 1s ease-out forwards 4s;
 }
 
 h6 {
@@ -256,6 +271,19 @@ h6 {
     width: 210px;
 }
 
+.firstProj {
+    scale: 0.25;
+    margin-left: 600px;
+    margin-top: 300px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 4s;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
 .projectSect {
     margin: 60px auto;
     max-width: 900px;
@@ -286,7 +314,7 @@ h6 {
     left: 130px;
     right: 130px;
     bottom: 5px;
-    background: #bfe8f9 ;
+    background: #aceec5 ;
     filter: blur(30px);
 }
 

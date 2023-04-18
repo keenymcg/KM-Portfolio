@@ -141,3 +141,19 @@ socials.forEach(img => {
         });
     }    
 });
+
+
+// FIRSTPROJ IMAGE
+
+const firstProj = document.querySelector('.firstProj');
+const projects = document.querySelector('#projects');
+
+function fadeImageIn() {
+    const projectsPosition = projects.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (projectsPosition < windowHeight / 2) { /* if the projects section is visible in the viewport */
+      firstProj.classList.add('fade-in'); /* add the fade-in class to the image */
+    };
+}
+window.addEventListener('scroll', fadeImageIn); /* listen for scroll events */
