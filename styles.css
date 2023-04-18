@@ -311,10 +311,8 @@ h6 {
     position: absolute;
     z-index: -1;
     top: 20px;
-    left: 130px;
-    right: 130px;
-    bottom: 5px;
-    background: #aceec5 ;
+    bottom: 15px;
+    background: #aceed0 ;
     filter: blur(30px);
 }
 
