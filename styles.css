@@ -258,6 +258,16 @@ h6 {
     }
 }
 
+.gitCodeWrapper {
+    height: 60px;
+}
+
+.gitCode {
+    scale: 0.4;
+    opacity: 50%;
+    cursor: pointer;
+}
+
 .projects {
     display: flex;
     justify-content: space-around;

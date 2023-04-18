@@ -157,3 +157,40 @@ function fadeImageIn() {
     };
 }
 window.addEventListener('scroll', fadeImageIn); /* listen for scroll events */
+
+
+// GITCODE IMAGES
+
+const gitCodeImgs = document.querySelectorAll('.gitCode');
+
+gitCodeImgs.forEach(img => {
+    img.style.opacity = '0.5';
+    img.style.transition = 'opacity 0.5s';
+
+    img.addEventListener('mouseover', () => {
+        img.style.opacity = '0.9';
+        img.style.transition = 'opacity 0.5s';
+    });
+
+    img.addEventListener('mouseout', () => {
+        img.style.opacity = '0.5';
+        img.style.transition = 'opacity 0.5s';
+    });
+
+    if (img.id === 'etchGit') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://github.com/keenymcg/Odin_Etch_a_sketch");
+        });
+    } else if (img.id === 'calcGit') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://github.com/keenymcg/Odin_Calculator");
+        });
+    } else if (img.id === 'rpsGit') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://github.com/keenymcg/Odin-Rock-Paper-Scissor-JS");
+        });
+    }    
+});
