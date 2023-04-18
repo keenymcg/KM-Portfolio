@@ -92,17 +92,17 @@ projImgs.forEach(img => {
     // When clicking on the image, open the corresponding link
     if (img.id === 'etch') {
         img.addEventListener('click', () => {
-        window.location.href = "https://keenymcg.github.io/Odin_Etch_a_sketch/";
+        window.open("https://keenymcg.github.io/Odin_Etch_a_sketch/", "_blank");
         });
     } else if (img.id === 'calc') {
         img.addEventListener('click', () => {
-        window.location.href = "https://keenymcg.github.io/Odin_Calculator/";
+        window.open("https://keenymcg.github.io/Odin_Calculator/", "_blank");
         });
     } else if (img.id === 'game') {
         img.addEventListener('click', () => {
-        window.location.href = "https://keenymcg.github.io/Odin-Rock-Paper-Scissor-JS/";
+        window.open("https://keenymcg.github.io/Odin-Rock-Paper-Scissor-JS/", "_blank");
         });
-    }
+    }    
 });
 
 
@@ -125,16 +125,19 @@ socials.forEach(img => {
     });
 
     if (img.id === 'linkedIn') {
-        img.addEventListener('click', () => {
-        window.location.href = "https://www.linkedin.com/in/keenanmcguckin/";
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://www.linkedin.com/in/keenanmcguckin/");
         });
     } else if (img.id === 'gitHub') {
-        img.addEventListener('click', () => {
-        window.location.href = "https://github.com/keenymcg";
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://github.com/keenymcg");
         });
     } else if (img.id === 'insta') {
-        img.addEventListener('click', () => {
-        window.location.href = "https://www.instagram.com/keenoman_photography/";
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://www.instagram.com/keenoman_photography/");
         });
-    }
+    }    
 });
