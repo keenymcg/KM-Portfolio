@@ -58,7 +58,7 @@
     }
 }
 
-@media screen and (max-width: 1095px) {
+@media screen and (max-width: 875px) {
     .menu img {
         opacity: 0;
     }
@@ -69,7 +69,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #F0F0F0 ;
+    background: rgb(237, 230, 222);
 }
 
 .hoverHere2 {
@@ -94,15 +94,18 @@ body {
     }
 }
 
+.headerBg {
+    display: flex;
+    justify-content: center;
+}
+
 header {
     display: flex;
+    width: 70%;
     height: 90vh;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    min-width: calc(100% - 60px);
-    margin-left: 40px;
-    margin-right: 40px;
 }
 
 .tempAvatar {
@@ -260,19 +263,23 @@ h6 {
     }
 }
 
-.gitCodeWrapper {
-    height: 60px;
-}
-
 .gitCode {
     scale: 0.4;
     opacity: 50%;
     cursor: pointer;
 }
 
+.projectsWrapper {
+    display: flex;
+    margin-top: -40px;
+
+}
+
 .projects {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
     margin: 40px auto;
@@ -324,7 +331,7 @@ h6 {
     z-index: -1;
     top: 20px;
     bottom: 15px;
-    background: #99cdc6 ;
+    background: #acd3ce ;
     filter: blur(30px);
 }
 
@@ -435,7 +442,8 @@ a:active {
     display: flex;
     justify-content: center;
     margin: auto;
-    padding: 20px;
+    padding: 50px 0;
+    background-color: #b298aa;
 }
 
 #resume2 {
@@ -444,10 +452,19 @@ a:active {
     width: 900px;
 }
 
+.veryFun {
+    scale: 0.25;
+    position: absolute;
+    left: -370px;
+    top: -320px;
+    rotate: 5deg;
+}
+
+
 #homeBtn {
     height: 40px;
     width: 47px;
-    position: sticky;
+    position: fixed;
     margin: auto;
     padding: 40px;
     animation-name: home-move;
