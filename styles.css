@@ -455,11 +455,21 @@ a:active {
 .veryFun {
     scale: 0.25;
     position: absolute;
-    left: -370px;
-    top: -320px;
+    margin-left: -960px;
+    margin-top: -390px;
     rotate: 5deg;
+    opacity: 0;
+    animation: fadeIn 3s ease 3s forwards;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 #homeBtn {
     height: 40px;
