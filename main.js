@@ -46,7 +46,7 @@ function handlePassionHover(event) {
         h6row1.textContent = `RPCV Ethiopia, 2017-2019`;
         h6row1.style.color = '#3F497F'
         h6row2.textContent = 'text'
-        h6row2.style.color = '#F0F0F0'
+        h6row2.style.color = 'rgb(237, 230, 222)'
     } else if (passionImageSrc === "images/music.jpg") {
         h6row1.textContent = "And guitar."; 
         h6row1.style.color = '#3F497F'
@@ -56,7 +56,7 @@ function handlePassionHover(event) {
         h6row1.textContent = "Certified Pilot (P2)"; 
         h6row1.style.color = '#3F497F'
         h6row2.textContent = 'text'
-        h6row2.style.color = '#F0F0F0'
+        h6row2.style.color = 'rgb(237, 230, 222)'
     } else if (passionImageSrc === "images/hummingbird.jpg") {
         h6row1.textContent = "Birds <3";
         h6row2.style.color = '#3F497F'
