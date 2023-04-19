@@ -308,6 +308,12 @@ h6 {
     max-width: 900px;
 }
 
+.projsPara {
+    text-align: center;
+    color: black;
+    margin-bottom: -65px;
+}
+
 .specialH1 {
     color: #3F497F;
     font-size: 25px;
