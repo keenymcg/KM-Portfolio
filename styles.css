@@ -69,7 +69,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: rgb(237, 230, 222);
+    background: rgb(255, 255, 255);
 }
 
 .hoverHere2 {
@@ -81,7 +81,7 @@ body {
     opacity: 0;
     animation-name: fadeIn;
     animation-duration: 2s;
-    animation-delay: 9s;
+    animation-delay: 7s;
     animation-fill-mode: forwards;
 }
 
@@ -112,6 +112,7 @@ header {
     height: 230px;
     width: 230px;
     border-radius: 30px;
+    box-shadow: 3px 3px 4px rgb(185, 185, 185);
 }
 
 h1 {
@@ -130,7 +131,7 @@ h1::before {
     left: 10px;
     right: 40px;
     bottom: 5px;
-    background: #f5d184 ;
+    background: #fae5b8 ;
     filter: blur(5px);
 }
 
@@ -138,7 +139,7 @@ p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #9b9592;
+    color: #83807e;
     letter-spacing: 1px;
     line-height: 1.5rem;
 }
@@ -174,28 +175,28 @@ li img {
 }
 
 .eggs-list li:nth-child(1) {
-    animation: sequential-animation 1s ease-out forwards 4s;
+    animation: sequential-animation 1s ease-out forwards 2s;
 }
 
 .eggs-list li:nth-child(2) {
-    animation: sequential-animation 1s ease-out forwards 5s;
+    animation: sequential-animation 1s ease-out forwards 2.5s;
 }
 
 .eggs-list li:nth-child(3) {
-    animation: sequential-animation 1s ease-out forwards 6s;
+    animation: sequential-animation 1s ease-out forwards 3s;
 }
 
 .eggs-list li:nth-child(4) {
-    animation: sequential-animation 1s ease-out forwards 7s;
+    animation: sequential-animation 1s ease-out forwards 3.5s;
 }
 
 .eggs-list li:nth-child(5) {
-    animation: sequential-animation 1s ease-out forwards 8s;
+    animation: sequential-animation 1s ease-out forwards 4s;
 }
 
 #bird {
-    height: 44.5px;
-    width: 60px;
+    height: 34px;
+    width: 50px;
     vertical-align: middle;
     margin-bottom: 5px;
 }
@@ -212,6 +213,8 @@ li img {
 .menu img {
     margin: 5px;
     transition: opacity 0.5s ease-out;
+    min-width: 55px;
+    min-height: 50px;
 }
 
 #camera {
@@ -228,7 +231,7 @@ li img {
 h6 {
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
-    color: rgb(237, 230, 222);
+    color: rgb(255, 255, 255);
     font-size: 12px;
     margin-top: 6px;
 }
@@ -293,6 +296,8 @@ h6 {
 .projImg {
     height: 200px;
     width: 210px;
+    min-height: 200px;
+    min-width: 210px;
 }
 
 .firstProj {
@@ -399,6 +404,8 @@ h6 {
     width: 50px;
     height: 50px;
     margin-bottom: 40px;
+    min-width: 50px;
+    min-height: 50px;
 }
 
 .socialsWrapper {
