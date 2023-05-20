@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
-@media only screen and (max-width: 768px) { 
+/* @media only screen and (max-width: 768px) { 
     .container {
-        min-width: calc(100% - 20px); /* 10px on each side */
+        min-width: calc(100% - 20px);
     }
     .menu img {
         display: none;
@@ -56,7 +56,7 @@
     .aboutMeP {
         width: 80vw;
     }
-}
+} */
 
 @media screen and (max-width: 875px) {
     .menu img {
@@ -104,7 +104,7 @@ header {
     width: 70%;
     height: 90vh;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     max-width: 1100px;
 }
@@ -114,6 +114,7 @@ header {
     width: 230px;
     border-radius: 30px;
     box-shadow: 3px 3px 4px rgb(185, 185, 185);
+    margin: 20px 20px;
 }
 
 h1 {
@@ -238,7 +239,6 @@ h6 {
 }
 
 #avatar {
-    padding-top: 50px;
 }
 
 .avatarTextRow2 {
