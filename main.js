@@ -187,7 +187,12 @@ gitCodeImgs.forEach(img => {
         img.style.transition = 'opacity 0.5s';
     });
 
-    if (img.id === 'etchGit') {
+    if (img.id === 'dashGit') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://keenymcg.github.io/Odin_Admin_Dash/");
+        });
+    } else if (img.id === 'etchGit') {
         img.addEventListener('click', (event) => {
             event.preventDefault();
             window.open("https://github.com/keenymcg/Odin_Etch_a_sketch");
