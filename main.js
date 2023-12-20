@@ -104,6 +104,10 @@ projImgs.forEach(img => {
         img.addEventListener('click', () => {
         window.open("https://keenymcg.github.io/Odin_Etch_a_sketch/", "_blank");
         });
+    } else if (img.id === 'dash') {
+        img.addEventListener('click', () => {
+        window.open("https://keenymcg.github.io/Odin_Admin_Dash/", "_blank");
+        });
     } else if (img.id === 'calc') {
         img.addEventListener('click', () => {
         window.open("https://keenymcg.github.io/Odin_Calculator/", "_blank");
@@ -190,7 +194,7 @@ gitCodeImgs.forEach(img => {
     if (img.id === 'dashGit') {
         img.addEventListener('click', (event) => {
             event.preventDefault();
-            window.open("https://keenymcg.github.io/Odin_Admin_Dash/");
+            window.open("https://github.com/keenymcg/Odin_Admin_Dash");
         });
     } else if (img.id === 'etchGit') {
         img.addEventListener('click', (event) => {
