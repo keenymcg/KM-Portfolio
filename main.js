@@ -36,43 +36,41 @@ const h6row1 = document.querySelector('.avatarText');
 const h6row2 = document.querySelector('.avatarTextRow2')
 
 // Define a function to handle the mouseover event for each passion list item
-function handlePassionHover(event) {
-  // Get the source of the image for the current passion
-    const passionImageSrc = event.currentTarget.getAttribute('data-avatar');
+// function handlePassionHover(event) {
+//   // Get the source of the image for the current passion
+//     const passionImageSrc = event.currentTarget.getAttribute('data-avatar');
 
-    // Change the avatar image to the new source
-    avatar.setAttribute('src', passionImageSrc);
-    if (passionImageSrc === "images/education.png") {
-        h6row1.textContent = `RPCV Ethiopia, 2017-2019`;
-        h6row1.style.color = '#3F497F'
-        h6row2.textContent = 'text'
-        h6row2.style.color = 'rgb(255, 255, 255)'
-    } else if (passionImageSrc === "images/music.jpg") {
-        h6row1.textContent = "Also guitar."; 
-        h6row1.style.color = '#3F497F'
-        h6row2.textContent = "Anyway, here's Wonderwall..."
-        h6row2.style.color = '#3F497F'
-    } else if (passionImageSrc === "images/paraglide.jpeg") {
-        h6row1.textContent = "Certified Pilot (P2)"; 
-        h6row1.style.color = '#3F497F'
-        h6row2.textContent = 'text'
-        h6row2.style.color = 'rgb(255, 255, 255)'
-    } else if (passionImageSrc === "images/hummingbird.jpg") {
-        h6row1.textContent = "Birds <3";
-        h6row2.style.color = '#3F497F'
-        h6row2.textContent = "(pic by me)"
-    } else if (passionImageSrc === "images/photography.jpg") {
-        h6row1.textContent = "Sony a7rii + Tamron 28-200"; 
-        h6row2.style.color = '#3F497F'
-        h6row2.textContent = "(pic also by me)"
-    }   
+//     // Change the avatar image to the new source
+//     avatar.setAttribute('src', passionImageSrc);
+//     if (passionImageSrc === "images/education.png") {
+//         h6row1.textContent = `RPCV Ethiopia, 2017-2019`;
+//         h6row1.style.color = '#3F497F'
+//         h6row2.textContent = 'text'
+//         h6row2.style.color = 'rgb(255, 255, 255)'
+//     } else if (passionImageSrc === "images/music.jpg") {
+//         h6row1.textContent = "Also guitar."; 
+//         h6row1.style.color = '#3F497F'
+//         h6row2.textContent = "Anyway, here's Wonderwall..."
+//         h6row2.style.color = '#3F497F'
+//     } else if (passionImageSrc === "images/paraglide.jpeg") {
+//         h6row1.textContent = "Certified Pilot (P2)"; 
+//         h6row1.style.color = '#3F497F'
+//         h6row2.textContent = 'text'
+//         h6row2.style.color = 'rgb(255, 255, 255)'
+//     } else if (passionImageSrc === "images/hummingbird.jpg") {
+//         h6row1.textContent = "Birds <3";
+//         h6row2.style.color = '#3F497F'
+//         h6row2.textContent = "(pic by me)"
+//     } else if (passionImageSrc === "images/photography.jpg") {
+//         h6row1.textContent = "Sony a7rii + Tamron 28-200"; 
+//         h6row2.style.color = '#3F497F'
+//         h6row2.textContent = "(pic also by me)"
+//     }   
+// };
 
-
-};
-
-passions.forEach(passion => {
-    passion.addEventListener('mouseover', handlePassionHover);
-});
+// passions.forEach(passion => {
+//     passion.addEventListener('mouseover', handlePassionHover);
+// });
 
 
 // PROJECTS
@@ -120,57 +118,20 @@ projImgs.forEach(img => {
 });
 
 
-// SOCIALS
+// // FIRSTPROJ IMAGE
 
-const socials = document.querySelectorAll(".socialsImg")
-socials.forEach(img => {
-    img.style.cursor = 'pointer';
+// const firstProj = document.querySelector('.firstProj');
+// const projects = document.querySelector('#projects');
 
-    img.addEventListener('mouseover', () => {
-        img.style.transition = 'width 1s, height 1s';
-        img.style.width = `${img.offsetWidth + 10}px`;
-        img.style.height = `${img.offsetHeight + 10}px`;
-    });
+// function fadeImageIn() {
+//     const projectsPosition = projects.getBoundingClientRect().top;
+//     const windowHeight = window.innerHeight;
 
-    img.addEventListener('mouseout', () => {
-        img.style.transition = 'width 1s, height 1s';
-        img.style.width = `${img.offsetWidth - 10}px`;
-        img.style.height = `${img.offsetHeight - 10}px`;
-    });
-
-    if (img.id === 'linkedIn') {
-        img.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.open("https://www.linkedin.com/in/keenanmcguckin/");
-        });
-    } else if (img.id === 'gitHub') {
-        img.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.open("https://github.com/keenymcg");
-        });
-    } else if (img.id === 'insta') {
-        img.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.open("https://www.instagram.com/keenoman_photography/");
-        });
-    }    
-});
-
-
-// FIRSTPROJ IMAGE
-
-const firstProj = document.querySelector('.firstProj');
-const projects = document.querySelector('#projects');
-
-function fadeImageIn() {
-    const projectsPosition = projects.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if (projectsPosition < windowHeight / 2) { /* if the projects section is visible in the viewport */
-      firstProj.classList.add('fade-in'); /* add the fade-in class to the image */
-    };
-}
-window.addEventListener('scroll', fadeImageIn); /* listen for scroll events */
+//     if (projectsPosition < windowHeight / 2) { /* if the projects section is visible in the viewport */
+//       firstProj.classList.add('fade-in'); /* add the fade-in class to the image */
+//     };
+// }
+// window.addEventListener('scroll', fadeImageIn); /* listen for scroll events */
 
 
 // GITCODE IMAGES
@@ -210,6 +171,43 @@ gitCodeImgs.forEach(img => {
         img.addEventListener('click', (event) => {
             event.preventDefault();
             window.open("https://github.com/keenymcg/Odin-Rock-Paper-Scissor-JS");
+        });
+    }    
+});
+
+
+// SOCIALS
+
+const socials = document.querySelectorAll(".socialsImg")
+socials.forEach(img => {
+    img.style.cursor = 'pointer';
+
+    img.addEventListener('mouseover', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth + 10}px`;
+        img.style.height = `${img.offsetHeight + 10}px`;
+    });
+
+    img.addEventListener('mouseout', () => {
+        img.style.transition = 'width 1s, height 1s';
+        img.style.width = `${img.offsetWidth - 10}px`;
+        img.style.height = `${img.offsetHeight - 10}px`;
+    });
+
+    if (img.id === 'linkedIn') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://www.linkedin.com/in/keenanmcguckin/");
+        });
+    } else if (img.id === 'gitHub') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://github.com/keenymcg");
+        });
+    } else if (img.id === 'insta') {
+        img.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.open("https://www.instagram.com/keenoman_photography/");
         });
     }    
 });
