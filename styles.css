@@ -1,75 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
-/* @media only screen and (max-width: 768px) { 
-    .container {
-        min-width: calc(100% - 20px);
-    }
-    .menu img {
-        display: none;
-    }
-
-    header {
-        margin-top: 60px;
-        margin-bottom: 150px;
-        font-size: 10px;
-    }
-    .tempAvatar {
-        margin-top: 30px;
-    }
-
-    .woop::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 20px;
-        left: 10px;
-        right: 40px;
-        bottom: 5px;
-        background: #bddbea ;
-        filter: blur(20px);
-    }
-
-    li {
-        margin: 15px 0;
-        letter-spacing: 1px;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 15px;
-        color: #3F497F;
-    }
-
-    h1 {
-        font-size: 10px;
-    }
-
-    .specialH1 {
-        width: 80vw;
-        right: 60px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .aboutHeading {
-        text-align: center;
-        margin-left: 60px;
-    }
-
-    .aboutMeP {
-        width: 80vw;
-    }
-} */
-
-@media screen and (max-width: 875px) {
-    .menu img {
-        opacity: 0;
-    }
-}
-
 body {
     position: relative;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background: rgb(255, 255, 255);
+}
+
+.body-wrapper {
+    padding: 0 6rem;
 }
 
 .hoverHere2 {
@@ -96,22 +36,38 @@ body {
 
 .headerBg {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+.masthead {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
 }
 
 header {
     display: flex;
-    width: 70%;
-    height: 90vh;
+    height: 100vh;
+    /* width: 70%; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1100px;
+    gap: 20px;
+}
+
+.headerH1 {
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    text-shadow: 1px 5px 10px #dccf6b;
 }
 
 .tempAvatar {
-    height: 230px;
     width: 230px;
+    min-width: 200px;
     border-radius: 30px;
     box-shadow: 3px 3px 4px rgb(185, 185, 185);
     margin: 20px 20px;
@@ -120,30 +76,34 @@ header {
 h1 {
     position: relative;
     color: #3F497F;
-    font-size: 35px;
+    font-size: 2rem;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
 }
 
-h1::before {
+/* h1 span::before {
     content: "";
     position: absolute;
     z-index: -1;
     top: 20px;
-    left: 10px;
-    right: 40px;
+    left: 2%;
+    right: 20%;
     bottom: 5px;
-    background: #fae5b8 ;
+    background: #fae5b8;
     filter: blur(5px);
-}
+} */
 
 p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: #83807e;
+    color: #4c4a49;
     letter-spacing: 1px;
     line-height: 1.5rem;
+}
+
+.strong {
+    color: #19869e
 }
 
 ul {
@@ -151,11 +111,12 @@ ul {
 }
 
 li img {
-    width: 16px;
+    width: 20px;
     height: 20px;
     margin-right: 18px;
     vertical-align: middle;
     margin-bottom: 5px;
+    opacity: 30%;
 }
 
 .eggs-list li {
@@ -163,7 +124,7 @@ li img {
     margin: 15px 0;
     letter-spacing: 1px;
     font-family: 'Ubuntu', sans-serif;
-    color: #5a5a5a;
+    color: #666666;
     font-size: 15px;
 }
 
@@ -201,6 +162,14 @@ li img {
     width: 50px;
     vertical-align: middle;
     margin-bottom: 5px;
+    align-self: center;
+}
+
+.avatar-subimages img {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    margin: 2px;
 }
 
 .menu {
@@ -238,20 +207,42 @@ h6 {
     margin-top: 6px;
 }
 
-#avatar {
+.avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
+
+
 
 .avatarTextRow2 {
     margin-top: -20px;
 }
 
+.arrowDiv {
+    opacity: 0;
+    animation: fade-in 1s ease-out forwards 5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 #arrow {
     display: flex;
-    margin: 20px auto;
+    margin: 0 auto;
     margin-top: 0px;
     height: 50px;
     width: 50px;
-    padding-top: 50px;
+    padding-top: 20px;
     position: relative;
     animation-name: arrow-move;
     animation-duration: 2s;
@@ -273,15 +264,17 @@ h6 {
 }
 
 .gitCode {
-    scale: 0.4;
+    width: 30%;
     opacity: 50%;
+    margin: 20px auto 0 auto; 
     cursor: pointer;
 }
 
 .projectsWrapper {
     display: flex;
-    margin-top: -40px;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 40px;
 }
 
 .projects {
@@ -290,8 +283,7 @@ h6 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 40px auto;
+    margin: 0 10px;
 }
 
 .projImg {
@@ -301,47 +293,50 @@ h6 {
     min-width: 210px;
 }
 
-.firstProj {
+/* .firstProj {
     scale: 0.25;
     margin-left: 600px;
     margin-top: 300px;
     position: absolute;
     opacity: 0;
     transition: opacity 1s ease-in-out 4s;
-}
+} */
 
 .fade-in {
     opacity: 1;
 }
 
 .projectSect {
-    margin: 60px auto;
-    max-width: 900px;
-}
-
-.projsPara {
-    text-align: center;
-    color: black;
-    margin-bottom: -65px;
-}
-
-.specialH1 {
-    color: #3F497F;
-    font-size: 25px;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 700;
-    padding: 0 100px;
-    text-align: center;
-    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .specialH1Wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 60px;
+    align-items: center;
+    max-width: 600px;
 }
 
+.specialH1 {
+    color: #3F497F;
+    font-size: 1.25rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.5rem;
+    margin: 20px;
+    text-shadow: 1px 5px 30px #07e1c4;
+}
+
+.projsPara {
+    text-align: center;
+    color: black;
+    margin: 0 20px;
+}
+/* 
 .specialH1::before {
     content: "";
     position: absolute;
@@ -350,7 +345,7 @@ h6 {
     bottom: 15px;
     background: #acd3ce ;
     filter: blur(30px);
-}
+} */
 
 #aboutMe {
     display: flex;
@@ -361,30 +356,36 @@ h6 {
     margin-right: 40px;
 }
 
-.aboutHeading {
-    width: 300px;
-}
-
 .aboutWrapper {
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-.aboutHeading::before {
+.aboutHeading {
+    text-align: center;
+    text-shadow: 5px 5px 15px #07e1c4;
+}
+
+/* .aboutHeading::before {
     content: "";
     position: absolute;
     z-index: -1;
+    width: 250px;
+    max-width: 300px;
     top: 20px;
-    left: 20px;
-    right: 25px;
     bottom: 5px;
-    background: #f5e3bc ;
+    background: #88d2c8;
     filter: blur(5px);
-}
+} */
 
 .aboutParaWrap {
     display: flex;
     flex-direction: column;
-    margin: auto 70px;
+    margin: 0 1rem;
+    text-align: left;
 }
 
 #arrow2 {
@@ -445,10 +446,6 @@ a:active {
     margin-bottom: 10px;
 }
 
-.contactHeading::before {
-    display: none;
-}
-
 #contactMe {
     display: flex;
     flex-wrap: wrap;
@@ -495,5 +492,76 @@ a:active {
     }
     100% {
     transform: translateY(0);
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1148px) {
+    .body-wrapper {
+        padding: 0;
+    }
+    
+    header {
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    .hoverHere2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    .menu {
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 588px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .headerH1 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* text-shadow: 1px 5px 10px #6bdccd; */
+    }
+
+    h1 span::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 14px;
+        left: 10%;
+        right: 10%;
+        bottom: 5px;
+        background: #fae5b8;
+        filter: blur(15px);
+    }
+    
+
+    .headerH1 span {
+        min-width: 150px;
+    }
+    
+    .avatar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .projsPara {
+        text-align: justify;
     }
 }
