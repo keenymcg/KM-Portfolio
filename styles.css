@@ -35,6 +35,7 @@ body {
 }
 
 .headerBg {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +43,6 @@ body {
 
 .masthead {
     display: flex;
-    flex-direction: column;
     margin: 0 20px;
 }
 
@@ -212,7 +212,7 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 10px auto;
 }
 
 
@@ -224,6 +224,10 @@ h6 {
 .arrowDiv {
     opacity: 0;
     animation: fade-in 1s ease-out forwards 5s;
+    position: absolute; /* Position the arrowDiv relative to its nearest positioned ancestor, which is .headerBg */
+    bottom: 50px; /* Position the arrowDiv 10 pixels above the bottom */
+    left: 50%; /* Position the arrowDiv horizontally centered */
+    transform: translateX(-50%); /* Adjust the position to center the arrowDiv horizontally */
 }
 
 @keyframes fade-in {
@@ -500,6 +504,10 @@ a:active {
 @media screen and (max-width: 1148px) {
     .body-wrapper {
         padding: 0;
+    }
+
+    .masthead {
+        flex-direction: column;
     }
     
     header {
