@@ -36,7 +36,6 @@ body {
 
 .headerBg {
     position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -232,6 +231,13 @@ h6 {
     justify-content: center;
 }
 
+#arrow1 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 15px;
+}
+
 #arrow {
     height: 50px;
     width: 50px;
@@ -337,6 +343,7 @@ h6 {
 } */
 
 #aboutMe {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -558,4 +565,9 @@ a:active {
     .projsPara {
         text-align: justify;
     }
+
+    #arrow1 {
+        position: relative;
+    }
+
 }
