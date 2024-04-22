@@ -46,6 +46,10 @@ body {
     margin: 0 20px;
 }
 
+.headerText {
+    max-width: 500px;
+}
+
 header {
     display: flex;
     height: 100vh;
@@ -224,10 +228,13 @@ h6 {
 .arrowDiv {
     opacity: 0;
     animation: fade-in 1s ease-out forwards 5s;
-    position: absolute; /* Position the arrowDiv relative to its nearest positioned ancestor, which is .headerBg */
-    bottom: 50px; /* Position the arrowDiv 10 pixels above the bottom */
-    left: 50%; /* Position the arrowDiv horizontally centered */
-    transform: translateX(-50%); /* Adjust the position to center the arrowDiv horizontally */
+    align-items: center;
+    justify-content: center;
+}
+
+#arrow {
+    height: 50px;
+    width: 50px;
 }
 
 @keyframes fade-in {
@@ -236,34 +243,6 @@ h6 {
     }
     100% {
         opacity: 1;
-    }
-}
-
-
-#arrow {
-    display: flex;
-    margin: 0 auto;
-    margin-top: 0px;
-    height: 50px;
-    width: 50px;
-    padding-top: 20px;
-    position: relative;
-    animation-name: arrow-move;
-    animation-duration: 2s;
-    animation-delay: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes arrow-move {
-    0% {
-    transform: translateY(0);
-    }
-    50% {
-    transform: translateY(-5px);
-    }
-    100% {
-    transform: translateY(0);
     }
 }
 
@@ -278,13 +257,14 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 40px;
+    margin: 0 40px 25px 40px;
 }
 
 .projects {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+
     flex-direction: column;
     align-items: center;
     margin: 0 10px;
@@ -324,6 +304,11 @@ h6 {
     max-width: 600px;
 }
 
+.specialH1Wrapper p {
+    text-align: center;
+    
+}
+
 .specialH1 {
     color: #3F497F;
     font-size: 1.25rem;
@@ -353,11 +338,12 @@ h6 {
 
 #aboutMe {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .aboutWrapper {
