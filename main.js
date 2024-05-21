@@ -207,7 +207,7 @@ socials.forEach(img => {
     } else if (img.id === 'insta') {
         img.addEventListener('click', (event) => {
             event.preventDefault();
-            window.open("https://www.instagram.com/keenoman_photography/");
+            window.open("https://www.instagram.com/photography_withkeenan/");
         });
     }    
 });
